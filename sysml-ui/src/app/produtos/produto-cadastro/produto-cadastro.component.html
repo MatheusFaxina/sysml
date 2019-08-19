@@ -1,0 +1,89 @@
+<div class="container">
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="adicionarProduto(f)">
+    <div class="ui-g">
+      <div class="ui-g-12">
+        <h1>Novo Produto</h1>
+      </div>
+          <div class="ui-g-12 ui-fluid">
+            <label>Nome</label>
+            <input pInputText type="text" name="nome"
+              [(ngModel)]="produto.nome"
+              #nome="ngModel" required minlength="5">
+          </div>
+
+          <div class="ui-g-12 ui-fluid">
+            <label>Link</label>
+            <input pInputText type="text" name="link"
+              [(ngModel)]="produto.link"
+              #link="ngModel" required minlength="5">
+          </div>
+
+          <div class="ui-g-6 ui-sm-12 ui-fluid">
+            <label>Frete</label>
+            <p-dropdown id="frete" name="frete"
+              [autoWidth]="false" placeholder="Selecione o frete"
+              [options]="fretes" optionLabel="nome"
+              [(ngModel)]="produto.frete" required #frete="ngModel"></p-dropdown>
+          </div>
+      
+          <div class="ui-g-6 ui-sm-12 ui-fluid">
+            <label>Anúncio</label>
+            <p-dropdown id="anuncio" name="anuncio"
+              [autoWidth]="false" placeholder="Selecione o anúncio"
+              [options]="anuncios" optionLabel="nome"
+              [(ngModel)]="produto.anuncio" required #anuncio="ngModel"></p-dropdown>
+          </div>
+
+          <div class="ui-g-4 ui-md-4 ui-fluid">
+            <label>Valor de Custo</label>
+            <input pInputText type="text" name="valorCustoSemFreteEAnuncio" placeholder="0,00" currencyMask
+              [(ngModel)]="produto.valorCustoSemFreteEAnuncio" [options]="{ prefix: '', thousands: '.', decimal: ',', allowNegative: false }"
+              #valorCustoSemFreteEAnuncio="ngModel" required>
+          </div>
+
+          <div class="ui-g-4 ui-md-4 ui-fluid">
+            <label>Valor de Venda</label>
+            <input pInputText type="text" name="valorVenda" placeholder="0,00" currencyMask
+              [(ngModel)]="produto.valorVenda" [options]="{ prefix: '', thousands: '.', decimal: ',', allowNegative: false }"
+              #valorVenda="ngModel" required>
+          </div>
+
+          <div class="ui-g-4 ui-md-4 ui-fluid">
+            <label>Quantidade em estoque</label>
+            <input pInputText type="number" id="estoque" name="estoque"
+              [(ngModel)]="produto.estoque"
+              #estoque="ngModel">
+          </div>
+
+          <div class="ui-g-4 ui-md-4 ui-fluid">
+            <label>Valor de Custo Total</label>
+            <input pInputText type="text" name="valorCustoTotal" placeholder="0,00" currencyMask
+              [(ngModel)]="produto.valorCustoTotal" [options]="{ prefix: '', thousands: '.', decimal: ',', allowNegative: false }"
+              #valorCustoTotal="ngModel" required>
+          </div>
+
+          <div class="ui-g-4 ui-md-4 ui-fluid">
+            <label>Lucro</label>
+            <input pInputText type="text" name="lucro" placeholder="0,00" currencyMask
+              [(ngModel)]="produto.lucro" [options]="{ prefix: '', thousands: '.', decimal: ',', allowNegative: false }"
+              #lucro="ngModel" required>
+          </div>
+
+          <div class="ui-g-4 ui-md-4 ui-fluid">
+            <label>Porcentagem de Lucro</label>
+            <input pInputText type="text" name="porcentagemLucro"
+              [(ngModel)]="produto.porcentagemLucro"
+              #porcentagemLucro="ngModel" required minlength="5">
+          </div>
+
+      <div class="ui-g-12">
+        <button pButton type="submit" label="Salvar"></button>
+        <button pButton type="button" label="Nova" class="ui-button-info"
+          (click)="novo(f)"></button>
+
+        <a routerLink="/produtos">Voltar para a pesquisa</a>
+      </div>
+    </div>
+
+  </form>
+</div>

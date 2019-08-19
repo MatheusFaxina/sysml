@@ -1,0 +1,23 @@
+<div class="container">
+    <form #f="ngForm" autocomplete="off" (ngSubmit)="configuracaoSalvar(f)">
+      <div class="ui-g">
+        <div class="ui-g-12">
+          <h1>Configuração do sistema</h1>
+        </div>
+        
+        <div class="ui-g-9 ui-md-9 ui-fluid">
+            <label>Porcentagem de Lucro Aceitável</label>
+            <input pInputText type="text" name="porcentagemLucroAceitavel"
+              [(ngModel)]="configuracao.porcentagemLucroAceitavel"
+              #porcentagemLucroAceitavel="ngModel" required minlength="5">
+          </div>
+  
+        <div class="ui-g-12">
+          <button pButton type="submit" label="Salvar"></button>
+  
+          <a routerLink="/configuracao">Voltar para a pesquisa</a>
+        </div>
+      </div>
+  
+    </form>
+  </div>

@@ -1,0 +1,37 @@
+<div class="container">
+    <form #f="ngForm" autocomplete="off" (ngSubmit)="adicionarAnuncio(f)">
+      <div class="ui-g">
+        <div class="ui-g-12">
+          <h1>Novo Anúncio</h1>
+        </div>
+
+        <div class="ui-g-9 ui-md-9 ui-fluid">
+            <label>Nome</label>
+            <input pInputText type="text" name="nome"
+              [(ngModel)]="anuncio.nome"
+              #nome="ngModel" required minlength="5">
+        </div>
+
+        <div class="ui-g-9 ui-md-9 ui-fluid">
+            <label>Porcentagem</label>
+            <input pInputText type="text" name="porcentagem"
+              [(ngModel)]="anuncio.porcentagem"
+              #porcentagem="ngModel" required minlength="5">
+        </div>
+
+        <div class="ui-g-9 ui-md-9 ui-fluid">
+            <label>Parcelamento</label>
+            <p-inputSwitch name="parcelamento" #parcelamento="ngModel" [(ngModel)]="anuncio.parcelamento"></p-inputSwitch>
+        </div>
+  
+        <div class="ui-g-12">
+          <button pButton type="submit" label="Salvar"></button>
+          <button pButton type="button" label="Nova" class="ui-button-info"
+            (click)="novo(f)"></button>
+  
+          <a routerLink="/anuncios">Voltar para a pesquisa</a>
+        </div>
+      </div>
+  
+    </form>
+  </div>

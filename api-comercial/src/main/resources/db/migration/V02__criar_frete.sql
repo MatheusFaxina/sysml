@@ -1,0 +1,7 @@
+CREATE TABLE frete (
+	codigo BIGINT(20) PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR(80) NOT NULL,
+	valor DECIMAL(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO frete(codigo, nome, valor) VALUES(1, "Frete R$15,90", 15.90);

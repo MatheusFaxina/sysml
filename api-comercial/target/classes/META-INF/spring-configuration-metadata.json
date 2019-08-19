@@ -1,0 +1,79 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty",
+      "name": "algamoney",
+      "type": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty"
+    },
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty",
+      "name": "algamoney.mail",
+      "sourceMethod": "public com.matheusfaxina.api.config.property.AlgamoneyApiProperty.Mail getMail() ",
+      "type": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty$Mail"
+    },
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty",
+      "name": "algamoney.seguranca",
+      "sourceMethod": "public com.matheusfaxina.api.config.property.AlgamoneyApiProperty.Seguranca getSeguranca() ",
+      "type": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty$Seguranca"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty$Mail",
+      "name": "algamoney.mail.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty$Mail",
+      "name": "algamoney.mail.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty$Mail",
+      "name": "algamoney.mail.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty$Mail",
+      "name": "algamoney.mail.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty$Mail",
+      "name": "algamoney.mail.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty$Mail",
+      "name": "algamoney.mail.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty$Mail",
+      "name": "algamoney.mail.username",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty$Mail",
+      "name": "algamoney.mail.username",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty",
+      "name": "algamoney.origin-permitida",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty$Seguranca",
+      "name": "algamoney.seguranca.enable-https",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.matheusfaxina.api.config.property.AlgamoneyApiProperty$Seguranca",
+      "name": "algamoney.seguranca.enable-https",
+      "type": "java.lang.Boolean"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="ui-g">
+  
+      <form autocomplete="off" (ngSubmit)="pesquisar()">
+  
+        <div class="ui-g-12">
+          <h1>Vendas</h1>
+        </div>
+  
+        <div class="ui-g-12 ui-fluid">
+          <label>Nome</label>
+          <input pInputText type="text" name="nome"
+            [(ngModel)]="filtro.nome">
+        </div>
+  
+        <div class="ui-g-12">
+          <button pButton type="submit" label="Pesquisar"></button>
+        </div>
+  
+      </form>
+    </div>
+  
+    <div class="ui-g">
+      <div class="ui-g-12">
+        <p-table [value]="vendas" [responsive]="true"
+          [paginator]="true" [rows]="filtro.itensPorPagina"
+          [lazy]="true" [totalRecords]="totalRegistros"
+          (onLazyLoad)="aoMudarPagina($event)"
+          #tabela>
+          <ng-template pTemplate="header">
+            <tr>
+              <th class="col-80">Data da Venda</th>
+              <th class="col-nome">Produto</th>
+              <th class="col-80">Valor Total</th>
+              <th class="col-80">Lucro</th>
+              <th class="col-nome">Número da Venda no Mercado Livre</th>
+              <th class="col-acoes-header"></th>
+            </tr>
+          </ng-template>
+  
+          <ng-template pTemplate="body" let-venda>
+            <tr>
+              <td>{{ venda.dataVenda }}</td>
+              <td>{{ venda.produto.nome }}</td>
+              <td>{{ venda.valorTotal }}</td>
+              <td>{{ venda.lucro | currency:'BRL':true }}</td>
+              <td>{{ venda.numeroVenda }}</td>
+              <td class="col-acoes">
+                <div class="botoes">
+                  <button pButton icon="fa fa-cart-arrow-down"
+                    pTooltip="Devolver" tooltipPosition="top"
+                    (click)="devolver(venda)"></button>
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+  
+          <ng-template pTemplate="emptymessage">
+            <tr>
+              <td colspan="5">
+                Nenhuma venda encontrada
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+  
+    </div>
+  
+  </div>
